@@ -5,12 +5,19 @@
 .App-header {
   text-align: center;
   padding: 20px;
+  font-family: 'Oswald', sans-serif;
 }
 
 /* Flexbox layout for buttons */
 .button-layout {
-  height: 100vh;
+  height: 60vh;
 }
+
+.logo {
+  width: 12%; /* 50% of the parent container */
+  height: auto; /* Maintain aspect ratio */
+}
+
 
 /* Center the buttons in their respective columns or rows */
 .button-container {
@@ -45,4 +52,9 @@
     width: 100%;
     height: 50vh; /* Each button takes up half of the vertical screen on mobile */
   }
+}
+
+h1 {
+  color: #003366;
+  font-size: xx-large; /* Dark blue color */
 }
