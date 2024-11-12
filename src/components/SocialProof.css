@@ -1,0 +1,56 @@
+/* SocialProof.css */
+
+/* Container Styling */
+.social-proof-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* White background for contrast */
+  }
+  
+  /* Section Heading */
+  .social-proof-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Oswald', sans-serif;
+    color: #000; /* Black text for readability */
+  }
+  
+  /* Testimonial Cards */
+  .social-proof-section .ant-card {
+    border: none; /* Remove default card border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .social-proof-section .ant-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Avatar Styling */
+  .social-proof-section .ant-avatar {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+  
+  /* Testimonial Text */
+  .social-proof-section .ant-card-meta-description {
+    font-size: 1rem;
+    color: #555555; /* Dark grey text */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .social-proof-section {
+      padding: 40px 10px;
+    }
+  
+    .social-proof-section h2 {
+      font-size: 2rem;
+    }
+  
+    .social-proof-section .ant-card-meta-description {
+      font-size: 0.9rem;
+    }
+  }
+  

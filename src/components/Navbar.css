@@ -1,0 +1,112 @@
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);; /* Transparent background */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+/* Navbar styling when scrolled */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent black background */
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Flex container for navbar content */
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread out the left, center, and right sections */
+  width: 100%; /* Ensure navbar spans the full width */
+  height: 64px; /* Default Ant Design Header height */
+  /* padding: 0 15px;  Horizontal padding for spacing */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  position: relative; /* To position the center section */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto; /* Prevent the logo from stretching */
+}
+
+/* Logo styling */
+.navbar-logo {
+  height: 40px;
+  transition: height 0.3s ease;
+}
+
+/* Title container (center) */
+.navbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Center the title horizontally */
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  color: white; /* White text */
+  font-size: 2rem; /* Default font size for larger screens */
+  text-align: center;
+  margin: 0;
+  letter-spacing: 2px;
+  white-space: nowrap; /* Prevent the title from wrapping */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Show ellipsis when the title overflows */
+  max-width: 80%; /* Limit title width to 80% of the navbar's width */
+}
+
+/* Contact Us button container */
+.contact-button {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto; /* Prevent the button from stretching */
+}
+
+/* Button styling */
+.contact-button .ant-btn {
+  font-family: 'Oswald', sans-serif;
+  width: 150px;
+  height: 40px; /* Fixed height for consistency */
+  padding: 0 10px; /* Horizontal padding for better button size */
+  margin-top: 0; /* No top margin to keep it centered */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #1890ff; /* Ant Design primary color */
+  color: white; /* White text */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  font-size: large;
+}
+
+/* Button Hover Effect */
+.contact-button .ant-btn:hover {
+  background-color: #40a9ff; /* Slightly lighter on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .navbar-title {
+    font-size: 1.5rem; /* Smaller font size on medium screens */
+    max-width: 75%; /* Reduce title width on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    padding: 0 10px; /* Adjust padding on smaller screens */
+  }
+
+  .contact-button .ant-btn {
+    height: 35px; /* Smaller height on mobile */
+    padding: 0 15px; /* Adjust padding for smaller screens */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .navbar-title {
+    font-size: 1.2rem; /* Even smaller font size on mobile */
+    max-width: 70%; /* Reduce title width further on mobile */
+  }
+}

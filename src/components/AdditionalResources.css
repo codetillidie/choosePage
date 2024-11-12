@@ -1,0 +1,50 @@
+/* AdditionalResources.css */
+
+/* Container Styling */
+.additional-resources-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  /* Section Heading */
+  .additional-resources-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Oswald', sans-serif;
+    color: #000; /* Black text */
+    font-size: 2.5rem;
+  }
+  
+  /* Resource List */
+  .additional-resources-section .ant-list-item {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    color: #1890ff; /* Ant Design primary color */
+    transition: color 0.3s ease;
+  }
+  
+  .additional-resources-section .ant-list-item a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .additional-resources-section .ant-list-item a:hover {
+    color: #40a9ff; /* Lighter blue on hover */
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .additional-resources-section {
+      padding: 40px 10px;
+    }
+  
+    .additional-resources-section h2 {
+      font-size: 2rem;
+    }
+  
+    .additional-resources-section .ant-list-item {
+      font-size: 1rem;
+    }
+  }
+  

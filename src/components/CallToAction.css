@@ -1,0 +1,47 @@
+/* CallToAction.css */
+
+/* Container Styling */
+.call-to-action-section {
+    padding: 60px 20px;
+    background-color: #e6f7ff; /* Light blue background */
+    text-align: center; /* Center align text and button */
+  }
+  
+  /* Section Heading */
+  .call-to-action-section h2 {
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+    color: #000; /* Black text */
+    font-size: 2.5rem;
+  }
+  
+  /* Call-to-Action Button */
+  .call-to-action-section .ant-btn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .call-to-action-section .ant-btn:hover {
+    background-color: #40a9ff; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .call-to-action-section {
+      padding: 40px 10px;
+    }
+  
+    .call-to-action-section h2 {
+      font-size: 2rem;
+    }
+  
+    .call-to-action-section .ant-btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  

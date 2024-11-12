@@ -1,0 +1,48 @@
+/* Multimedia.css */
+
+/* Container Styling */
+.multimedia-section {
+    padding: 60px 20px;
+    background-color: #f0f2f5; /* Ant Design's default background color */
+  }
+  
+  /* Section Heading */
+  .multimedia-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Oswald', sans-serif;
+    color: #000; /* Black text */
+    font-size: 2.5rem;
+  }
+  
+  /* Multimedia Content */
+  .multimedia-section .multimedia-image,
+  .multimedia-section video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .multimedia-section .multimedia-image:hover,
+  .multimedia-section video:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .multimedia-section {
+      padding: 40px 10px;
+    }
+  
+    .multimedia-section h2 {
+      font-size: 2rem;
+    }
+  
+    .multimedia-section video {
+      height: auto;
+    }
+  }
+  

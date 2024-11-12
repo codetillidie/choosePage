@@ -1,60 +1,201 @@
 /* src/App.css */
 
+/* Importing the Google Font 'Oswald' with a weight of 700 (bold) */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
-
 .App-header {
-  text-align: center;
-  padding: 20px;
-  font-family: 'Oswald', sans-serif;
+  width: 100%;
+  height: 60%;
+  text-align: center; /* Center the header text */
+  padding: 20px; /* Padding around the header content */
+  font-family: 'Oswald', sans-serif; /* Apply the 'Oswald' font */
+  color: white; /* White text to stand out against the background */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds a shadow for readability */
+  
+  /* Background image setup */
+  background-image: url('./assets/images/viewer.jpg'); /* Replace with your actual image path */
+  background-size: cover; /* Ensure the image covers the full viewport */
+  background-position: center; /* Position image in the center */
+  background-repeat: no-repeat; /* Prevents background image from repeating */
+  
+  /* Apply blur to the background */
+  backdrop-filter: blur(20px); /* Apply blur to background image */
+  
+  /* Position and layering */
+  position: relative; /* Make the header relative for overlay positioning */
+  z-index: 1; /* Ensure the content is above the overlay */
+}
+
+.App-header::before {
+  content: ''; /* Necessary to create a pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6); /* White overlay on Header Image with 40% opacity */
+  z-index: -1; /* Ensure the overlay is behind the content */
 }
 
 /* Flexbox layout for buttons */
 .button-layout {
-  height: 60vh;
+  height: 60vh; /* Occupy 60% of the viewport height for the button section */
+
 }
 
+/* Logo styling */
 .logo {
-  width: 12%; /* 50% of the parent container */
-  height: auto; /* Maintain aspect ratio */
+  width: 10%; /* Set the logo width to 14% of its parent container */
+  height: auto; /* Maintain the logo's aspect ratio */
+  z-index: 1; /* Ensure the logo is above the background overlay */
 }
 
-
-/* Center the buttons in their respective columns or rows */
+/* Center the buttons horizontally and vertically */
 .button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh; /* Each button takes up half of the screen height */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  height: 50vh; /* Set each button to occupy 50% of the screen height */
 }
 
 /* Large button styles */
 .ant-btn {
-  width: 250px;
-  height: 250px;
-  font-size: 4rem; /* Hide text if not wanted, or adjust as needed */
-  font-family: 'Oswald', sans-serif;  /* Apply Oswald font */
-  font-weight: 700;  /* Use bold weight */
-  border: none; /* Remove border */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
-  transition: transform 0.2s ease-in-out; /* Smooth transform on hover */
-  /*background-color: transparent !important; /* Remove default blue background */
+  width: 250px; /* Button width */
+  height: 250px; /* Button height */
+  font-size: 4rem; /* Large font size for button text */
+  font-family: 'Oswald', sans-serif; /* Apply the 'Oswald' font */
+  font-weight: 700; /* Bold font weight */
+  border: none; /* Remove default button border */
+  background-color: "default"; /* Transparent button background */
+  color: white; /* White text to contrast with the background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
+  transition: transform 0.2s ease-in-out; /* Smooth animation for hover effect */
+  z-index: 1; /* Ensure button appears above the background overlay */
 }
 
-/* Hover effect to make the buttons pop */
+/* Hover effect for the buttons */
 .ant-btn:hover {
-  transform: translateY(-5px); /* Slight upward movement on hover */
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+  transform: translateY(-5px); /* Move the button slightly up on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5); /* Darker shadow when hovering */
 }
 
-/* Mobile-specific layout */
-@media (max-width: 768px) {
+/* Mobile-specific layout for smaller screens */
+@media (max-width: 768px) { /* Apply these styles for screens 768px or smaller */
+  .App {
+    height: fit-content;
+    background-size: 200%; /* Ensure the image covers the full viewport */
+    background-repeat: repeat;
+  }
   .button-container {
-    width: 100%;
-    height: 50vh; /* Each button takes up half of the vertical screen on mobile */
+    width: 100%; /* Full width on mobile */
+    height: 50vh; /* Each button occupies half the vertical screen */
   }
 }
 
+/* Heading styling for main titles */
 h1 {
-  color: #003366;
-  font-size: xx-large; /* Dark blue color */
+  color: #ffffff; /* White text color */
+  font-size: 3rem; /* Large font size for heading */
+  z-index: 1; /* Ensure the heading text is above the background */
+}
+
+/* Page-specific background styling */
+.page-background {
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox to align content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  color: white; /* White text for contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for readability */
+  z-index: 1; /* Ensure content appears above the background */
+}
+
+/* Sub-heading styling */
+h2 {
+  font-size: 2rem; /* Large font size for sub-heading */
+  color: white; /* White text for contrast */
+  z-index: 1; /* Ensure the sub-heading appears above the background */
+}
+
+/* Additional styles to accommodate the navbar */
+body {
+  margin: 0; /* Remove default body margin */
+}
+
+.ant-layout {
+  min-height: 100vh; /* Ensure the layout covers the full viewport height */
+}
+
+/* Adjust padding to prevent content from being hidden behind the fixed navbar */
+.App {
+  padding-top: 64px; /* Height of the Ant Design Header */
+}
+
+.App.scrolled-content {
+  padding-top: 64px; /* Adjust if navbar height changes when scrolled */
+}
+/* src/App.css */
+
+/* Existing styles... */
+
+/* Ensure each section has adequate spacing */
+.social-proof-section,
+.call-to-action-section,
+.features-benefits-section,
+.multimedia-section,
+.additional-resources-section {
+  width: 100%;
+  font-size: 3rem; /* Large font size for sub-heading */
+  padding: 60px 20px; /* Adjust padding as needed */
+  background-color: #f9f9f9; /* Light background color for contrast */
+  z-index: 0;
+}
+
+.social-proof-section {
+  background-color: #ffffff; /* White background */
+}
+
+.call-to-action-section {
+  background-color: #e6f7ff; /* Light blue background */
+  text-align: center;
+}
+
+.features-benefits-section {
+  background-color: #ffffff; /* White background */
+}
+
+.multimedia-section {
+  background-color: #f0f2f5; /* Ant Design's default background color */
+}
+
+.additional-resources-section {
+  background-color: #ffffff; /* White background */
+}
+
+/* Section Headings */
+.social-proof-section h2,
+.call-to-action-section h2,
+.features-benefits-section h2,
+.multimedia-section h2,
+.additional-resources-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Oswald', sans-serif;
+  color: #000;
+  z-index: 1;
+}
+
+/* Button Layout Adjustments */
+.button-layout {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .button-layout {
+    flex-direction: column;
+    align-items: center;
+  }
 }
